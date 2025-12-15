@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teka-Teki Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Halaman Login -->
+  <div id="loginPage" class="page">
+    <div class="card">
+      <h1>Teka-Teki Online</h1>
+      <input type="text" id="loginUsername" placeholder="Username" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button onclick="register()">Daftar</button>
+      <p id="authMessage"></p>
+    </div>
+  </div>
+
+  <!-- Halaman Utama -->
+  <div id="mainPage" class="page" style="display: none;">
+    <header>
+      <div id="profileInfo">
+        <span id="currentUser">Pengguna</span>
+        <div class="trophy">🏆 <span id="trophyCount">0</span></div>
+      </div>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <!-- Buat Teka-Teki -->
+    <div class="card" id="createPuzzleCard">
+      <h2>Buat Teka-Teki</h2>
+      <textarea id="puzzleText" placeholder="Tulis teka-teki di sini..."></textarea>
+      <input type="text" id="puzzleAnswer" placeholder="Jawapan (tanpa huruf besar/space)" />
+      <button onclick="createPuzzle()">Hantar Teka-Teki</button>
+    </div>
+
+    <!-- Senarai Teka-Teki Orang Lain -->
+    <div class="card">
+      <h2>Teka-Teki Terkini</h2>
+      <div id="puzzlesFeed"></div>
+    </div>
+
+    <!-- Sejarah Teka-Teki Saya -->
+    <div class="card" id="myHistoryCard">
+      <h2>Sejarah Teka-Teki Saya</h2>
+      <div id="myPuzzlesHistory"></div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJW_BwyZzxqumyDsyACddWZMUKJv1O9as",
+      authDomain: "ak-playvideo.firebaseapp.com",
+      projectId: "ak-playvideo",
+      storageBucket: "ak-playvideo.firebasestorage.app",
+      messagingSenderId: "452155991718",
+      appId: "1:452155991718:web:5d534214ad9526fc61f667",
+      measurementId: "G-9EHXX4JKK2"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
