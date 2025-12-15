@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  background: #ff9800;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #f57c00;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.trophy {
+  background: gold;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.puzzle-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.puzzle-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.answer-input {
+  width: 70% !important;
+  display: inline-block;
+}
+
+.answer-btn {
+  width: 28% !important;
+  display: inline-block;
+  background: #4caf50;
+}
+
+.answer-btn:hover {
+  background: #388e3c;
+}
+
+.solved-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5722;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .answer-input, .answer-btn {
+    width: 100% !important;
+  }
+}
